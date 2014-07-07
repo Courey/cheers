@@ -20,11 +20,12 @@ birthday = birthday.split(" ")
 today = Time.new
 dayNum = today.yday
 
-date = Time.local(birthday[2], birthday[0], birthday[1])
+date = Time.local(today.year, birthday[0], birthday[1])
 dateNum = date.yday
 
 if date.month > today.month
   diff = dateNum - dayNum
+
 else
   diff = 365 - dayNum + dateNum
 end
