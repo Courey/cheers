@@ -13,3 +13,20 @@ name.each_char do |char|
   end
 end
 puts "#{name}'s just GRAND!"
+puts "Hey #{name}, what's your birthday? (mm dd yyyy)"
+birthday = gets.chomp
+birthday = birthday.split(" ")
+
+today = Time.new
+dayNum = today.yday
+
+date = Time.local(birthday[2], birthday[0], birthday[1])
+dateNum = date.yday
+
+if date.month > today.month
+  diff = dateNum - dayNum
+else
+  diff = 365 - dayNum + dateNum
+end
+
+puts "your birthday is in #{diff} days! Happy Birthday in advance!"
