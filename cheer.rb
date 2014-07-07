@@ -29,4 +29,4 @@ else
   diff = 365 - dayNum + dateNum
 end
 
-puts "your birthday is in #{diff} days! Happy Birthday in advance!"
+puts "Awesome! Your birthday is in #{diff} days! Happy Birthday in advance!"
